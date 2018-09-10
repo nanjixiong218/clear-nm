@@ -1,6 +1,6 @@
 {
   "name": "clear-nm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "清除node_modules",
   "keywords": ["node_modules", "clear", "tools"],
   "bin": "index.js",
@@ -8,7 +8,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "许会元",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanjixiong218/clear-nm"
+  },
+  "author": {
+    "name": "许会元",
+    "email": "695540791@qq.com",
+    "url": "https://github.com/nanjixiong218"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
