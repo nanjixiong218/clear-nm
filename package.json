@@ -1,6 +1,6 @@
 {
-  "name": "cn",
-  "version": "1.0.0",
+  "name": "clear-nm",
+  "version": "1.0.1",
   "description": "清除node_modules",
   "keywords": ["node_modules", "clear", "tools"],
   "bin": "index.js",
