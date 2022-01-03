@@ -11,7 +11,7 @@
   "bin": "./build/index.js",
   "exports": "./build/index.js",
   "scripts": {
-    "compile": "tsc ./src/index.ts",
+    "compile": "tsc",
     "prod": "tsc && node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
