@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "outDir": "./build",
+      "allowJs": false,
+      "target": "es5",
+      "module": "ES2020",
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "node"
+  },
+  "include": [
+      "./src/**/*"
+  ]
+}
