@@ -1,8 +1,9 @@
 {
   "name": "clear-nm",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "清除node_modules",
   "type": "module",
+  "files": ["build", "Readme.md"],
   "keywords": [
     "node_modules",
     "clear",
@@ -13,6 +14,7 @@
   "scripts": {
     "compile": "tsc",
     "prod": "tsc && node ./build/index.js",
+    "publish": "npm publish --registry=https://registry.npmjs.org/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
