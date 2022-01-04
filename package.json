@@ -8,7 +8,7 @@
     "clear",
     "tools"
   ],
-  "bin": "./build/bin/index.js",
+  "bin": { "cnm": "./build/bin/index.js"},
   "exports": "./build/src/index.js",
   "scripts": {
     "compile": "tsc",
