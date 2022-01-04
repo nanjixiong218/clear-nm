@@ -27,15 +27,17 @@ async function run(dir: string): Promise<boolean> {
         await loop(currentPath)
       }
     }
+    
+    return true
+  }
+ 
+  try {
+    let result = await loop(dir)
     if(cnt == 0) {
       console.log(chalk.red('没有发现 node_modules 目录'))
     } else {
       console.log(chalk.green(`共完成 ${cnt} 个  node_modules 目录的删除 !`))  
     }
-    return true
-  }
-  try {
-    let result = await loop(dir)
     return result;
   } catch (error) {
     return false; 
