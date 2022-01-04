@@ -4,17 +4,16 @@ import fse from 'fs-extra'
 import path from 'path'
 import chalk from 'chalk'
 
-const root = process.cwd()
-async function run() {
-  async function loop(dir) {
-    const files = await fse.readdir(dir)
-    for(let i = 0; i < files.length ; i++) {
-      const currentPath = path.join(dir, files[i])
-      const access = await fse.pathExists(currentPath)
+async function run(dir: string): Promise<boolean> {
+  async function loop(dir: string): Promise<boolean> {
+    const files: string[] = await fse.readdir(dir)
+    for(let i:number = 0; i < files.length ; i++) {
+      const currentPath:string = path.join(dir, files[i])
+      const access:boolean = await fse.pathExists(currentPath)
       if(!access) {
         continue
       }
-      const stats = await fse.stat(currentPath)
+      const stats:fse.Stats = await fse.stat(currentPath)
       if(stats.isDirectory()) {
         if(currentPath.indexOf('node_modules') !== -1) {
           console.log(chalk.green(`开始删除 ${currentPath}!`))
@@ -25,7 +24,13 @@ async function run() {
         await loop(currentPath)
       }
     }
+    return true
   }
-  loop(root)
+  try {
+    let result = await loop(dir)
+    return result;
+  } catch (error) {
+    return false; 
+  }
 }
-run()
+export default run;

@@ -8,8 +8,8 @@
     "clear",
     "tools"
   ],
-  "bin": "./build/index.js",
-  "exports": "./build/index.js",
+  "bin": "./build/bin/index.js",
+  "exports": "./build/src/index.js",
   "scripts": {
     "compile": "tsc",
     "prod": "tsc && node ./build/index.js",
