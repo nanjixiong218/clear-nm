@@ -1,21 +1,30 @@
 {
   "name": "clear-nm",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "清除node_modules",
   "type": "module",
-  "files": ["build", "Readme.md"],
+  "types": "./build/src/index.d.ts",
+  "files": [
+    "build",
+    "Readme.md"
+  ],
   "keywords": [
     "node_modules",
     "clear",
     "tools"
   ],
-  "bin": { "cnm": "./build/bin/index.js"},
+  "bin": {
+    "cnm": "./build/bin/index.js"
+  },
   "exports": "./build/src/index.js",
   "scripts": {
     "compile": "tsc",
     "prod": "tsc && node ./build/index.js",
     "publish": "npm publish --registry=https://registry.npmjs.org/",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "pre-publish": "publish"
   },
   "repository": {
     "type": "git",
@@ -38,6 +47,7 @@
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^8.1.3",
     "@types/node": "^17.0.6",
+    "husky": "^7.0.4",
     "typescript": "^4.5.4"
   }
 }

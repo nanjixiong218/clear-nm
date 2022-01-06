@@ -5,6 +5,8 @@
       "target": "es2020",
       "module": "ES2020",
       "allowSyntheticDefaultImports": true,
+      "declaration": true,
+      "declarationDir": "build",
       "moduleResolution": "node"
   },
   "include": [
